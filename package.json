@@ -1,0 +1,26 @@
+{
+  "name": "mls-debug",
+  "version": "0.1.0",
+  "description": "Helper for debug in Multi Level Studio",
+  "private": true,
+  "scripts": {
+    "start": "node app"
+  },
+  "author": {
+    "name": "Wagner"
+  },
+  "devDependencies": {
+    "@types/express": "^4.16.0",
+    "@types/node": "^12.6.8",
+    "typescript": "^3.5.3"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "cookie-parser": "^1.4.0",
+    "debug": "^2.2.0",
+    "express": "^4.14.0",
+    "morgan": "^1.7.0",
+    "pug": "^2.0.0-beta6",
+    "serve-favicon": "^2.3.0"
+  }
+}
