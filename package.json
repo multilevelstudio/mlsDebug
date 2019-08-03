@@ -6,9 +6,20 @@
   "author": {
     "name": "Wagner - MultiLevel Studio "
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/multilevelstudio/mlsDebug.git"
+  },
+  "keywords": [ "mls" ],
+  "license": "MIT",
+  "homepage": "https://multilevelstudio.com",
+  "bin": {
+    "mlsDebug": "./dist/app.js"
+  },
   "scripts": {
     "start": "node dist/app.js",
-    "build": "tsc --build src/ & tsc --build tests/"
+    "build": "tsc --build src/ & tsc --build tests/",
+    "install": "npm run build"
   },
   "devDependencies": {
     "@types/express": "^4.17.0",
