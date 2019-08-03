@@ -3,15 +3,18 @@
   "version": "0.1.0",
   "description": "Helper for debug in Multi Level Studio",
   "private": true,
-  "scripts": {
-    "start": "node app"
-  },
   "author": {
-    "name": "Wagner"
+    "name": "Wagner - MultiLevel Studio "
+  },
+  "scripts": {
+    "start": "node dist/app.js",
+    "build": "tsc --build src/ & tsc --build tests/"
   },
   "devDependencies": {
-    "@types/express": "^4.16.0",
-    "@types/node": "^12.6.8",
+    "@types/express": "^4.17.0",
+    "@types/node": "^12.6.9",
+    "@types/tape": "^4.2.33",
+    "@types/request": "2.48.2",
     "typescript": "^3.5.3"
   },
   "dependencies": {
@@ -21,6 +24,8 @@
     "express": "^4.14.0",
     "morgan": "^1.7.0",
     "pug": "^2.0.0-beta6",
-    "serve-favicon": "^2.3.0"
+    "request": "^2.88.0",
+    "serve-favicon": "^2.3.0",
+    "tape": "^4.11.0"
   }
 }

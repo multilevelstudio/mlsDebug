@@ -16,7 +16,8 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>b74afee0-cc5f-43af-9e7b-8428a6119435</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>app.js</StartupFile>
+    <StartupFile>
+    </StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -33,33 +34,35 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="app.js" />
-    <Content Include="dist\L2Debug.js" />
-    <Content Include="dist\L2Debug.js.map" />
-    <Content Include="routes\index.js" />
     <Content Include="package.json" />
-    <Content Include="public\stylesheets\main.css" />
     <Content Include="README.md" />
     <Content Include="src\tsconfig.json" />
+    <Content Include="tests\tsconfig.json" />
     <Content Include="views\index.pug" />
     <Content Include="views\layout.pug" />
     <Content Include="views\error.pug" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="dist\" />
+    <Folder Include="tests\" />
     <Folder Include="public\mls\" />
     <Folder Include="src\" />
     <Folder Include="public\" />
-    <Folder Include="public\images\" />
-    <Folder Include="public\javascripts\" />
-    <Folder Include="public\stylesheets\" />
-    <Folder Include="routes\" />
     <Folder Include="views\" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="dist\L2Debug.d.ts" />
+    <TypeScriptCompile Include="src\app.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\index.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
     <TypeScriptCompile Include="src\L2Debug.ts">
       <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="tests\Test_L2Debug.ts">
+      <SubType>Code</SubType>
+      <TestFramework>Tape</TestFramework>
     </TypeScriptCompile>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
