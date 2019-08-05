@@ -18,7 +18,7 @@ export function apiUpdateTs(fileName: string, ts: string, js: string, map: strin
     let tsFileName = path.resolve(__dirname, "../public/mls/" + fileName);
     let noExt = tsFileName.substr(0, tsFileName.lastIndexOf("."));
     let jsFileName = noExt + ".js";
-    let mpFileName = noExt + ".map";
+    let mpFileName = noExt + ".js.map";
 
     fs.writeFileSync(tsFileName, ts);
     fs.writeFileSync(jsFileName, js);

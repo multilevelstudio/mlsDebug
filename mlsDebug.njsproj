@@ -38,9 +38,6 @@
     <Content Include="README.md" />
     <Content Include="src\tsconfig.json" />
     <Content Include="tests\tsconfig.json" />
-    <Content Include="views\index.pug" />
-    <Content Include="views\layout.pug" />
-    <Content Include="views\error.pug" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="dist\" />
@@ -48,7 +45,6 @@
     <Folder Include="public\mls\" />
     <Folder Include="src\" />
     <Folder Include="public\" />
-    <Folder Include="views\" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="src\app.ts">

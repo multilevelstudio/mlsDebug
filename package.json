@@ -6,6 +6,9 @@
   "author": {
     "name": "Wagner - MultiLevel Studio "
   },
+  "engines": {
+    "node": ">8.0"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/multilevelstudio/mlsDebug.git"
