@@ -333,4 +333,4 @@ ASALocalRun/
 # MLS Folders
 public/mls/
 dist/
-test/*.js
+tests/*.js
