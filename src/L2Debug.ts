@@ -20,9 +20,18 @@ export function apiUpdateTs(fileName: string, ts: string, js: string, map: strin
     let jsFileName = noExt + ".js";
     let mpFileName = noExt + ".js.map";
 
+    createDirRecursively( path.dirname(tsFileName) );
+
     fs.writeFileSync(tsFileName, ts);
     fs.writeFileSync(jsFileName, js);
     fs.writeFileSync(mpFileName, map);
 
     return "ok;";
+}
+
+function createDirRecursively(dir: string) {
+   if ((dir.length > 2) && (!fs.existsSync(dir))) {
+       createDirRecursively(path.join(dir, ".."));
+       fs.mkdirSync(dir);
+   }
 }
