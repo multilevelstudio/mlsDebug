@@ -2,7 +2,8 @@
 import path = require('path');
 import * as common from "./common"
 
-export function apiUpdateTs(fileName: string, ts: string, js: string, map: string): string {
+
+export function apiUpdateTs(prj: string, fileName: string, ts: string, js: string, map: string): string {
 
     if ((!fileName) || (fileName.indexOf("..") >= 0)) {
         throw new Error("invalid fileName");
@@ -12,11 +13,13 @@ export function apiUpdateTs(fileName: string, ts: string, js: string, map: strin
         throw new Error("error, fileName not .ts");
     }
 
-    if ((!ts) || (!js) || (!map)) {
+    if ((!prj) || (!ts) || (!js) || (!map)) {
         throw new Error("error, files dont found");
     }
 
-    let tsFileName = path.resolve(__dirname, "../public/mls/" + fileName);
+    let prjID = +prj;
+
+    let tsFileName = path.resolve(__dirname, "../public/mls/" + prjID + "/" + fileName.replace("_", "/")); // ex: public/mls/100101/api/index.ts
     let noExt = tsFileName.substr(0, tsFileName.lastIndexOf("."));
     let jsFileName = noExt + ".js";
     let mpFileName = noExt + ".js.map";
@@ -29,3 +32,4 @@ export function apiUpdateTs(fileName: string, ts: string, js: string, map: strin
 
     return "ok;";
 }
+

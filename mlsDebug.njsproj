@@ -50,9 +50,11 @@
     <TypeScriptCompile Include="src\app.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>
+    <TypeScriptCompile Include="src\common.ts" />
     <TypeScriptCompile Include="src\index.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>
+    <TypeScriptCompile Include="src\L1Debug.ts" />
     <TypeScriptCompile Include="src\L2Debug.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>
