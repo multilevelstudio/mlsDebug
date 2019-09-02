@@ -18,8 +18,8 @@ export function apiUpdateTs(prj: string, fileName: string, ts: string, js: strin
     }
 
     let prjID = +prj;
-
-    let tsFileName = path.resolve(__dirname, "../public/mls/" + prjID + "/" + fileName.replace("_", "/")); // ex: public/mls/100101/api/index.ts
+    let relativePath = "../public/mls/" + prjID + "/" + fileName.replace(/_/g, "/");
+    let tsFileName = path.resolve(__dirname, relativePath); // ex: public/mls/100101/api/index.ts
     let noExt = tsFileName.substr(0, tsFileName.lastIndexOf("."));
     let jsFileName = noExt + ".js";
     let mpFileName = noExt + ".js.map";
@@ -30,6 +30,19 @@ export function apiUpdateTs(prj: string, fileName: string, ts: string, js: strin
     fs.writeFileSync(jsFileName, js);
     fs.writeFileSync(mpFileName, map);
 
+    const autoExec = "build_index.ts";
+    if (fileName === autoExec) {
+
+        let relativeJsFileName = relativePath.substr(0, relativePath.lastIndexOf(".")) + ".js";
+        var build = require(relativeJsFileName);
+        console.log("executing " + relativeJsFileName + " .build()");
+        try {
+            build.build();
+        } catch (e) {
+            console.log("error on exec: ", e);
+        }
+
+    }
     return "ok;";
 }
 
