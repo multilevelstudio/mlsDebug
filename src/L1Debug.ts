@@ -34,9 +34,10 @@ export function apiUpdateTs(prj: string, fileName: string, ts: string, js: strin
     if (fileName === autoExec) {
 
         let relativeJsFileName = relativePath.substr(0, relativePath.lastIndexOf(".")) + ".js";
-        var build = require(relativeJsFileName);
+        var buildf = require(relativeJsFileName);
         console.log("executing " + relativeJsFileName + " .build()");
         try {
+            let build = new buildf(); // ex: class 
             build.build();
         } catch (e) {
             console.log("error on exec: ", e);
@@ -45,4 +46,5 @@ export function apiUpdateTs(prj: string, fileName: string, ts: string, js: strin
     }
     return "ok;";
 }
+
 
