@@ -27,21 +27,21 @@
     "install": "npm run build"
   },
   "devDependencies": {
-    "@types/express": "^4.17.1",
-    "@types/node": "^12.7.3",
+    "@types/express": "^4.17.3",
+    "@types/node": "^12.12.30",
     "@types/request": "2.48.2",
-    "@types/tape": "^4.2.33",
-    "typescript": "^3.6.2"
+    "@types/tape": "^4.2.34",
+    "typescript": "^3.8.3"
   },
   "dependencies": {
     "body-parser": "^1.15.0",
-    "cookie-parser": "^1.4.0",
+    "cookie-parser": "^1.4.5",
     "debug": "^2.2.0",
     "express": "^4.14.0",
     "morgan": "^1.7.0",
     "pug": "^2.0.0-beta6",
-    "request": "^2.88.0",
+    "request": "^2.88.2",
     "serve-favicon": "^2.3.0",
-    "tape": "^4.11.0"
+    "tape": "^4.13.2"
   }
 }
